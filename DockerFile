@@ -1,0 +1,12 @@
+"version: '3'
+
+# Use the official PostgreSQL image from Docker Hub as the base image
+FROM postgres:latest
+
+# Set environment variables for the database configuration (optional)
+ENV POSTGRES_DB=fashion
+ENV POSTGRES_USER=myuser
+ENV POSTGRES_PASSWORD=mypassword
+
+# Copy any custom configuration files (if required)
+COPY custom_config.conf /etc/postgresql/postgresql.conf
